@@ -108,6 +108,7 @@ const App = () => {
         </h1>
 
         <textarea
+        autoFocus
           value={input}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
