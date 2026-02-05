@@ -171,3 +171,79 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+// import { useState, useEffect } from "react";
+// import { FiRefreshCw, FiCopy, FiCheck } from "react-icons/fi";
+// import toast, { Toaster } from "react-hot-toast";
+
+// const App = () => {
+//   const [color, setColor] = useState("#FFFFFF");
+//   const [copied, setCopied] = useState(false);
+
+//   const generateRandomColor = () => {
+//     const randomColor =
+//       "#" +
+//       Math.floor(Math.random() * 16777215)
+//         .toString(16)
+//         .padStart(6, "0");
+
+//     setColor(randomColor);
+//     setCopied(false);
+//   };
+
+//   // useEffect(() => {
+//   //   generateRandomColor(); 
+//   // }, []);
+
+//   const copyColor = async () => {
+//     await navigator.clipboard.writeText(color);
+//     setCopied(true);
+//     toast.success("Color copied!");
+//     setTimeout(() => setCopied(false), 1500);
+//   };
+
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-slate-950 px-4">
+//       <Toaster position="top-right" />
+
+//       <div className="w-full max-w-md bg-slate-900 rounded-2xl p-6 shadow-lg space-y-4">
+//         <h1 className="text-white text-xl font-semibold text-center">
+//           🎨 Random Color Generator
+//         </h1>
+
+//         {/* Color Preview */}
+//         <div
+//           className="h-40 rounded-xl border border-slate-700"
+//           style={{ backgroundColor: color }}
+//         />
+
+//         {/* Color Code */}
+//         <div
+//           onClick={copyColor}
+//           className="flex items-center justify-between bg-slate-800 p-3 rounded-xl cursor-pointer hover:bg-slate-700 transition"
+//         >
+//           <span className="text-white font-mono text-lg">{color}</span>
+//           {copied ? (
+//             <FiCheck className="text-green-400" />
+//           ) : (
+//             <FiCopy className="text-slate-400" />
+//           )}
+//         </div>
+
+//         {/* Button */}
+//         <button
+//           onClick={generateRandomColor}
+//           className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl transition"
+//         >
+//           <FiRefreshCw />
+//           Generate Color
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
